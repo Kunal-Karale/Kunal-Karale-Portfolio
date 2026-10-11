@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kunal Karale — Cloud & DevOps Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070b12;--panel:#0e1521;--line:#1c2a3b;--text:#e8eef6;--muted:#8fa1b5;--a:#5eead4;--b:#818cf8;--amber:#fbbf24;--mono:'JetBrains Mono',ui-monospace,monospace;--sans:'Space Grotesk',system-ui,sans-serif;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#070b12}}
+:root[data-theme="dark"]{--bg:#070b12}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f4f7fb;--panel:#fff;--line:#d9e2ee;--text:#0f1b2d;--muted:#52647a;--a:#0d9488;--b:#4f46e5;--amber:#b45309;color-scheme:light}}
+:root[data-theme="light"]{--bg:#f4f7fb;--panel:#fff;--line:#d9e2ee;--text:#0f1b2d;--muted:#52647a;--a:#0d9488;--b:#4f46e5;--amber:#b45309;color-scheme:light}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);height:100%}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100%;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(600px 400px at 12% 0,color-mix(in srgb,var(--a) 16%,transparent),transparent),radial-gradient(600px 400px at 95% 25%,color-mix(in srgb,var(--b) 16%,transparent),transparent)}
+a{color:var(--a);text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--a);outline-offset:3px}
+.w{max-width:1040px;margin:0 auto;padding:0 22px}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.logo{font:600 15px var(--mono);color:var(--text)}.logo b{color:var(--a)}
+.nav nav{display:flex;gap:18px;font:13px var(--mono);flex-wrap:wrap}.nav nav a{color:var(--muted)}.nav nav a:hover{color:var(--a)}
+.hero{padding:72px 0 56px;display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center}
+@media(max-width:820px){.hero{grid-template-columns:1fr;padding-top:44px}}
+.pill{display:inline-flex;gap:8px;align-items:center;font:12px var(--mono);border:1px solid var(--line);background:var(--panel);padding:6px 12px;border-radius:99px;color:var(--muted);margin-bottom:20px}
+.dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px #22c55e;animation:p 2s infinite}
+@keyframes p{50%{opacity:.35}}
+h1{font-size:clamp(38px,7vw,68px);line-height:1.04;letter-spacing:-.03em;margin-bottom:16px}
+.g{background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{color:var(--muted);font-size:18px;max-width:56ch;margin-bottom:26px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:12px 22px;border-radius:10px;font-weight:600;font-size:15px;border:1px solid var(--line);color:var(--text);background:var(--panel);transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:linear-gradient(90deg,var(--a),var(--b));color:#06121a;border:0}
+.term{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 20px 50px -20px rgba(0,0,0,.5)}
+.th{display:flex;gap:6px;padding:11px 14px;border-bottom:1px solid var(--line)}.th i{width:10px;height:10px;border-radius:50%;background:#ef4444}.th i:nth-child(2){background:#f59e0b}.th i:nth-child(3){background:#22c55e}
+.tb{padding:16px 18px;font:13px/1.9 var(--mono);color:var(--muted)}.tb b{color:var(--a);font-weight:500}.tb em{color:var(--b);font-style:normal}
+.cur{display:inline-block;width:8px;height:15px;background:var(--a);vertical-align:middle;animation:p 1s infinite}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:20px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px}.stat b{display:block;font-size:30px}.stat span{font:12px var(--mono);color:var(--muted)}
+section{padding:60px 0}
+.eye{font:12px var(--mono);color:var(--a);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+h2{font-size:clamp(26px,4vw,36px);letter-spacing:-.02em;margin-bottom:10px}
+.sub{color:var(--muted);max-width:62ch;margin-bottom:28px}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
+.scroll svg{display:block;min-width:700px;width:100%;height:auto}
+.n{fill:var(--bg);stroke:var(--line)}.hl{stroke:var(--a)}.nt{fill:var(--text);font:600 11px var(--sans)}.ns{fill:var(--muted);font:10px var(--mono)}.az{fill:none;stroke:var(--b);stroke-dasharray:4 4;opacity:.6}.ln{stroke:var(--a);stroke-width:1.5;fill:none;stroke-dasharray:5 4;animation:d 1.2s linear infinite}
+@keyframes d{to{stroke-dashoffset:-9}}
+@media(prefers-reduced-motion:reduce){.ln,.dot,.cur{animation:none}html{scroll-behavior:auto}}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px;transition:transform .2s,border-color .2s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-4px);border-color:var(--a)}
+.card h3{font-size:18px;margin-bottom:8px;display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+.card p{color:var(--muted);font-size:14.5px;margin-bottom:14px}
+.card ul{list-style:none;font:12.5px/1.8 var(--mono);color:var(--muted);margin-bottom:14px}.card li:before{content:"› ";color:var(--a)}
+.tag{font:11px var(--mono);color:var(--a);border:1px solid var(--a);padding:2px 9px;border-radius:99px;white-space:nowrap}.tag.am{color:var(--amber);border-color:var(--amber)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}.chips span{font:11px var(--mono);background:var(--bg);border:1px solid var(--line);color:var(--muted);padding:3px 9px;border-radius:6px}
+.card .go{margin-top:14px;font:13px var(--mono)}
+.flag{grid-column:1/-1;background:linear-gradient(135deg,color-mix(in srgb,var(--a) 10%,var(--panel)),var(--panel))}
+.sk{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.bar{margin:10px 0 0;font:12px var(--mono);color:var(--muted)}.bar div{height:6px;border-radius:9px;background:var(--line);margin-top:4px;overflow:hidden}.bar div i{display:block;height:100%;background:linear-gradient(90deg,var(--a),var(--b));border-radius:9px}
+.pipe{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font:12.5px var(--mono);margin-top:10px}.pipe span{background:var(--panel);border:1px solid var(--line);padding:6px 12px;border-radius:8px}.pipe b{color:var(--a)}
+.tl{border-left:2px solid var(--line);margin-left:6px;padding-left:22px}.tl div{position:relative;padding-bottom:22px}.tl div:before{content:"";position:absolute;left:-29px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--a);box-shadow:0 0 0 4px var(--bg)}
+.tl b{display:block}.tl small{font:12px var(--mono);color:var(--muted)}
+.cta{background:linear-gradient(135deg,color-mix(in srgb,var(--a) 14%,var(--panel)),color-mix(in srgb,var(--b) 14%,var(--panel)));border:1px solid var(--line);border-radius:18px;padding:40px 28px;text-align:center}
+.cl{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:22px}
+footer{text-align:center;color:var(--muted);font:12px var(--mono);padding:28px 0 44px}
+</style>
+</head>
+<body>
+<div class="nav"><div class="w"><div class="logo">kunal<b>@</b>cloud:~$</div>
+<nav><a href="#arch">architecture</a><a href="#projects">projects</a><a href="#skills">skills</a><a href="#journey">journey</a><a href="#contact">contact</a></nav></div></div>
+
+<div class="w">
+<header class="hero">
+<div>
+<div class="pill"><span class="dot"></span>Open to work · Pune · Relocating to Hyderabad, Mumbai, Chennai</div>
+<h1>Hi, I'm Kunal.<br><span class="g">I build &amp; secure cloud infrastructure.</span></h1>
+<p class="lede">Fresher Cloud Support, Linux Administrator and NOC Engineer. Trained in Multi-Cloud with DevOps at Naresh IT, Hyderabad, with hands-on AWS projects: a live 3-tier app on a custom VPC and a Jenkins CI/CD pipeline.</p>
+<div class="btns"><a class="btn p" href="#projects">View projects</a><a class="btn" href="https://github.com/Kunal-Karale" target="_blank" rel="noopener">GitHub ↗</a><a class="btn" href="#contact">Hire me</a></div>
+</div>
+<div class="term"><div class="th"><i></i><i></i><i></i></div><div class="tb">
+<b>$</b> whoami<br>kunal-karale<br>
+<b>$</b> cat role.txt<br><em>Cloud Support | Linux Admin | NOC</em><br>
+<b>$</b> aws sts get-caller-identity<br>skills: EC2 S3 IAM VPC RDS<br>
+<b>$</b> curl -I https://dhopaticloud.in<br>HTTP/2 <em>200 OK</em><br>
+<b>$</b> <span class="cur"></span></div></div>
+</header>
+
+<div class="stats">
+<div class="stat"><b class="g">3-Tier</b><span>live app on AWS, 2 AZs</span></div>
+<div class="stat"><b class="g">8</b><span>layered Security Groups</span></div>
+<div class="stat"><b class="g">0</b><span>public SSH ports (SSM only)</span></div>
+<div class="stat"><b class="g">SAA</b><span>AWS certification in progress</span></div>
+</div>
+
+<section id="arch">
+<div class="eye">// flagship</div><h2>SKYBASE request flow</h2>
+<p class="sub">Every request follows this path: two Availability Zones, private tiers, HTTPS on a custom domain, and no public SSH.</p>
+<div class="scroll"><svg viewBox="0 0 760 290" role="img" aria-label="SKYBASE: user to Route 53 and ACM, external ALB, web tier, internal ALB, app tier, RDS MySQL across two AZs">
+<rect x="150" y="14" width="600" height="262" rx="10" class="az"/><text x="162" y="32" class="ns">VPC · public + private subnets · IGW + NAT · 8 Security Groups</text>
+<g class="ln"><path d="M92 145H112"/><path d="M196 145H212"/><path d="M296 145H318"/><path d="M296 145V95H318M296 145V195H318"/><path d="M414 95H440M414 195H440M440 95V195M440 145H456"/><path d="M540 145H562"/><path d="M562 145V95H584M562 145V195H584"/><path d="M660 95H676M660 195H676M676 95V195M676 145H690"/></g>
+<rect x="8" y="125" width="84" height="40" rx="6" class="n"/><text x="50" y="149" text-anchor="middle" class="nt">User</text>
+<rect x="112" y="115" width="84" height="60" rx="6" class="n hl"/><text x="154" y="140" text-anchor="middle" class="nt">Route 53</text><text x="154" y="156" text-anchor="middle" class="ns">+ ACM SSL</text>
+<rect x="212" y="115" width="84" height="60" rx="6" class="n hl"/><text x="254" y="140" text-anchor="middle" class="nt">ALB</text><text x="254" y="156" text-anchor="middle" class="ns">external</text>
+<rect x="318" y="70" width="96" height="50" rx="6" class="n"/><text x="366" y="92" text-anchor="middle" class="nt">Web EC2</text><text x="366" y="108" text-anchor="middle" class="ns">Nginx+React</text>
+<rect x="318" y="170" width="96" height="50" rx="6" class="n"/><text x="366" y="192" text-anchor="middle" class="nt">Web EC2</text><text x="366" y="208" text-anchor="middle" class="ns">Nginx+React</text>
+<rect x="456" y="115" width="84" height="60" rx="6" class="n hl"/><text x="498" y="140" text-anchor="middle" class="nt">ALB</text><text x="498" y="156" text-anchor="middle" class="ns">internal</text>
+<rect x="562" y="70" width="98" height="50" rx="6" class="n"/><text x="611" y="92" text-anchor="middle" class="nt">App EC2</text><text x="611" y="108" text-anchor="middle" class="ns">Node.js+PM2</text>
+<rect x="562" y="170" width="98" height="50" rx="6" class="n"/><text x="611" y="192" text-anchor="middle" class="nt">App EC2</text><text x="611" y="208" text-anchor="middle" class="ns">Node.js+PM2</text>
+<rect x="690" y="115" width="52" height="60" rx="6" class="n hl"/><text x="716" y="141" text-anchor="middle" class="nt">RDS</text><text x="716" y="156" text-anchor="middle" class="ns">MySQL</text>
+<text x="380" y="266" text-anchor="middle" class="ns">Private instances reached only via SSM Session Manager (keyless)</text></svg></div>
+</section>
+
+<section id="projects">
+<div class="eye">// work</div><h2>Projects</h2>
+<p class="sub">Built by hand in the AWS console and on Linux servers. Source is on my GitHub.</p>
+<div class="grid">
+<div class="card flag"><h3>SKYBASE: 3-Tier Infrastructure on AWS <span class="tag am">flagship · Aug 2026</span></h3>
+<p>A web, app and database architecture on a custom VPC, live at dhopaticloud.in over HTTPS.</p>
+<ul><li>Custom VPC, 2 AZs, public/private subnets, IGW, NAT, route tables</li><li>Web tier (Nginx + React) and app tier (Node.js + PM2) connected to RDS MySQL</li><li>Internal and external ALBs with Auto Scaling Groups on both tiers</li><li>Route 53 custom domain + ACM SSL certificate</li><li>8 least-privilege Security Groups; IAM + SSM Session Manager replace public SSH</li></ul>
+<div class="chips"><span>VPC</span><span>EC2</span><span>RDS</span><span>ALB</span><span>ASG</span><span>Route 53</span><span>ACM</span><span>SSM</span><span>IAM</span><span>Nginx</span><span>Node.js</span></div>
+<a class="go" href="https://github.com/Kunal-Karale/SKYBASE-PROJECT" target="_blank" rel="noopener">View on GitHub ↗</a></div>
+
+<div class="card"><h3>CodeFlow / AUTO-SHIP CI/CD <span class="tag">DevOps</span></h3>
+<p>Automatic build, code quality and deployment of a Java application through a CI/CD pipeline.</p>
+<ul><li>Jenkins master-slave on 2 EC2 instances</li><li>GitHub → Maven build → SonarQube analysis</li><li>.war artifacts stored in Amazon S3</li><li>Hands-off deploy to Apache Tomcat; Ansible used for deployment</li></ul>
+<div class="chips"><span>Jenkins</span><span>Maven</span><span>SonarQube</span><span>S3</span><span>Tomcat</span><span>Ansible</span></div>
+<a class="go" href="https://github.com/Kunal-Karale/AUTO-SHIP-PROJECT" target="_blank" rel="noopener">View on GitHub ↗</a></div>
+
+<div class="card"><h3>LAMP Stack Hosting <span class="tag">Linux</span></h3>
+<p>Frontend and backend application hosted on a classic Linux, Apache, MySQL, PHP stack.</p>
+<ul><li>Apache web server configuration</li><li>MySQL database for the backend</li><li>PHP application served on Linux</li></ul>
+<div class="chips"><span>Linux</span><span>Apache</span><span>MySQL</span><span>PHP</span></div>
+<a class="go" href="https://github.com/Kunal-Karale/LAMP-Stack-Project" target="_blank" rel="noopener">View on GitHub ↗</a></div>
+</div>
+<p class="sub" style="margin-top:18px">Also on GitHub: <a href="https://github.com/Kunal-Karale/devops-scripts" target="_blank" rel="noopener">devops-scripts</a>, a forked collection of shell scripts for DevOps practice.</p>
+</section>
+
+<section id="skills">
+<div class="eye">// toolbox</div><h2>Skills</h2>
+<p class="sub">Strongest where I have shipped projects. Tools beyond that come from my course and practice labs.</p>
+<div class="sk">
+<div class="card"><h3>AWS <span class="tag">hands-on</span></h3><p>EC2 · S3 · IAM · VPC · RDS · Route 53 · ACM · CloudWatch · ALB · Auto Scaling · SSM</p><div class="bar">Proficiency<div><i style="width:80%"></i></div></div></div>
+<div class="card"><h3>Linux <span class="tag">hands-on</span></h3><p>Ubuntu · CentOS · users and permissions · services · Nginx · Apache · shell scripting</p><div class="bar">Proficiency<div><i style="width:75%"></i></div></div></div>
+<div class="card"><h3>Networking <span class="tag">solid basics</span></h3><p>TCP/IP · DNS · subnetting · routing · NAT · load balancing · Security Groups</p><div class="bar">Proficiency<div><i style="width:70%"></i></div></div></div>
+<div class="card"><h3>CI/CD &amp; DevOps <span class="tag">project-based</span></h3><p>Git · GitHub · Jenkins · Maven · SonarQube · Ansible · Nexus</p><div class="bar">Proficiency<div><i style="width:65%"></i></div></div></div>
+<div class="card"><h3>Containers &amp; IaC <span class="tag am">trained</span></h3><p>Docker · Kubernetes · Terraform</p><div class="bar">Proficiency<div><i style="width:50%"></i></div></div></div>
+<div class="card"><h3>Monitoring &amp; Multi-Cloud <span class="tag am">trained</span></h3><p>Prometheus · Grafana · CloudWatch · Azure · GCP</p><div class="bar">Proficiency<div><i style="width:50%"></i></div></div></div>
+</div>
+<div class="pipe"><span>Git</span><b>›</b><span>Jenkins</span><b>›</b><span>Maven</span><b>›</b><span>SonarQube</span><b>›</b><span>Nexus</span><b>›</b><span>Docker</span><b>›</b><span>Kubernetes</span></div>
+</section>
+
+<section id="journey">
+<div class="eye">// path</div><h2>Learning journey</h2><p class="sub"></p>
+<div class="tl">
+<div><b>AWS Certified Solutions Architect – Associate</b><small>In progress · expected 2026</small></div>
+<div><b>Cyber Awareness AI Basic</b><small>NIIT Foundation · Cyber Suraksha Plus · Mar 2026</small></div>
+<div><b>Multi-Cloud with DevOps</b><small>Naresh IT, Hyderabad · completed</small></div>
+<div><b>B.Sc. Computer Science</b><small>Annasaheb Magar Mahavidyalaya, Hadapsar, Pune</small></div>
+<div><b>HSC (61.50%) · SSC (73.20%)</b><small>Residential Highschool, Shevgaon</small></div>
+</div></section>
+
+<section id="contact">
+<div class="cta"><div class="eye">// let's talk</div><h2>Looking for a Cloud Support, Linux or NOC fresher?</h2>
+<p class="sub" style="margin:0 auto">I can start on a support or NOC desk from day one and keep learning on the job.</p>
+<div class="cl">
+<a class="btn p" href="mailto:dhopaticloud@gmail.com">dhopaticloud@gmail.com</a>
+<a class="btn" href="tel:+918087566195">+91-8087566195</a>
+<a class="btn" href="https://linkedin.com/in/kunal-karale" target="_blank" rel="noopener">LinkedIn ↗</a>
+<a class="btn" href="https://github.com/Kunal-Karale" target="_blank" rel="noopener">GitHub ↗</a></div></div>
+</section>
+</div>
+<footer>© 2026 Kunal Namdev Karale · Pune, Maharashtra</footer>
+</body>
+</html>
